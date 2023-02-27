@@ -1,0 +1,23 @@
+$mobile-width: 375px;
+
+$primary: hsl(171, 66%, 44%);
+$secondary: hsl(233, 100%, 69%);
+$accent-dark: hsl(210, 10%, 33%);
+$accent-light: hsl(201, 11%, 66%);
+
+$font-size: 18px;
+$font-family: "Bai Jamjuree", sans-serif;
+$weight-normal: 400;
+$weight-bold: 600;
+
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+
+body {
+  font-family: $font-family;
+  background-image: url("/images/bg-header-mobile.png");
+  @media only screen and (min-width: 375px) {
+    background-image: url("/images/bg-header-desktop.png");
+  }
+  background-position: top;
+  background-repeat: no-repeat;
+}
