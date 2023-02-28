@@ -1,14 +1,126 @@
-@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;600&display=swap");
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Bai Jamjuree", sans-serif;
+  color: hsl(201, 11%, 66%);
+  font-size: 18px;
+  font-weight: 300;
   background-image: url("/images/bg-header-mobile.png");
   background-position: top;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0px 30px;
 }
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 376px) {
   body {
     background-image: url("/images/bg-header-desktop.png");
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+button {
+  all: unset;
+  width: 310px;
+  height: 60px;
+  color: white;
+  font-weight: 400;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  border-radius: 2em;
+  margin: 0.5em auto;
+}
+button.primary {
+  transition: background-color 250ms linear;
+  background-color: hsl(171, 66%, 44%);
+  border: 1px solid #1d907f;
+  border-bottom: 3px solid #1d907f;
+  box-shadow: 0em 0.5em 1em 0.1em rgba(38, 186, 164, 0.2);
+}
+button.primary:hover {
+  background-color: #2acbb3;
+  cursor: pointer;
+}
+button.secondary {
+  transition: background-color 250ms linear;
+  background-color: hsl(233, 100%, 69%);
+  border: 1px solid #2e46ff;
+  border-bottom: 3px solid #2e46ff;
+  box-shadow: 0em 0.5em 1em 0.1em rgba(97, 115, 255, 0.2);
+}
+button.secondary:hover {
+  background-color: #7585ff;
+  cursor: pointer;
+}
+
+p {
+  line-height: 1.4em;
+  letter-spacing: -0.04em;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 7em;
+}
+header img {
+  margin: 6em auto 3em auto;
+}
+header h1 {
+  font-size: 1.8em;
+  font-weight: 400;
+  color: black;
+}
+header p {
+  margin-bottom: 2em;
+}
+
+section h2 {
+  color: black;
+  font-weight: 400;
+  font-size: 1.6em;
+}
+section h3 {
+  color: black;
+  font-weight: 400;
+}
+
+button {
+  all: unset;
+  width: 310px;
+  height: 60px;
+  color: white;
+  font-weight: 400;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  border-radius: 2em;
+  margin: 0.5em auto;
+}
+button.primary {
+  transition: background-color 250ms linear;
+  background-color: hsl(171, 66%, 44%);
+  border: 1px solid #1d907f;
+  border-bottom: 3px solid #1d907f;
+  box-shadow: 0em 0.5em 1em 0.1em rgba(38, 186, 164, 0.2);
+}
+button.primary:hover {
+  background-color: #2acbb3;
+  cursor: pointer;
+}
+button.secondary {
+  transition: background-color 250ms linear;
+  background-color: hsl(233, 100%, 69%);
+  border: 1px solid #2e46ff;
+  border-bottom: 3px solid #2e46ff;
+  box-shadow: 0em 0.5em 1em 0.1em rgba(97, 115, 255, 0.2);
+}
+button.secondary:hover {
+  background-color: #7585ff;
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */
