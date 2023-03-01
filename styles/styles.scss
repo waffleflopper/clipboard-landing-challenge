@@ -28,9 +28,6 @@ body {
   background-position: top;
   background-repeat: no-repeat;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -65,6 +62,13 @@ header {
 section {
   margin-block: 75px 60px;
   display: block;
+  .bullets {
+    display: flex;
+    img {
+      flex-basis: 720px;
+      flex: 1;
+    }
+  }
   p {
     margin-bottom: 48px;
   }
@@ -86,7 +90,7 @@ section {
   }
   .devices-image {
     width: 100%;
-    margin-block: 10px 100px;
+    margin-block: 10px;
   }
   .company {
     display: block;
@@ -114,12 +118,16 @@ main {
 
 footer {
   margin-top: 100px;
+  padding-bottom: 36px;
   a {
     color: $accent-dark;
     text-decoration: none;
     display: block;
     margin-block: 36px;
-    font-weight: $weight-bold;
+    font-weight: $weight-normal;
+    &:last-child {
+      margin-bottom: 0px;
+    }
   }
   img {
     margin-top: 50px;
