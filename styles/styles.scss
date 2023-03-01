@@ -32,86 +32,110 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 0px 30px;
+  padding: 0;
+  margin: 0;
 }
 
-button {
-  all: unset;
-  width: 310px;
-  height: 60px;
-  color: white;
-  font-weight: $weight-normal;
-  font-size: 1.2em;
-  letter-spacing: 0.05em;
-  border-radius: 2em;
-  margin: 0.5em auto;
-  &.primary {
-    transition: background-color 250ms linear;
-    background-color: $primary;
-    border: 1px solid darken($primary, 10%);
-    border-bottom: 3px solid darken($primary, 10%);
-    box-shadow: 0em 0.5em 1em 0.1em rgba($primary, 0.2);
-    &:hover {
-      background-color: lighten($primary, 4%);
-      cursor: pointer;
-    }
-  }
-  &.secondary {
-    transition: background-color 250ms linear;
-    background-color: $secondary;
-    border: 1px solid darken($secondary, 10%);
-    border-bottom: 3px solid darken($secondary, 10%);
-    box-shadow: 0em 0.5em 1em 0.1em rgba($secondary, 0.2);
-    &:hover {
-      background-color: lighten($secondary, 4%);
-      cursor: pointer;
-    }
-  }
-}
 p {
-  line-height: 1.4em;
-  letter-spacing: -0.04em;
+  line-height: 25px;
   margin: 0;
   padding: 0;
-  font-size: 18px;
+  font-size: 16px;
+  padding-inline: 10px;
 }
 
 header {
   text-align: center;
-  margin-bottom: 7em;
+  padding-inline: 25px;
+  margin-bottom: 75px;
   img {
-    margin: 6em auto 3em auto;
+    margin: 120px auto 60px auto;
   }
   h1 {
-    font-size: 1.8em;
-    font-weight: $weight-normal;
-    color: black;
+    font-size: 30px;
+    font-weight: $weight-bold;
+    color: $accent-dark;
+    margin: 0;
   }
   p {
-    margin-bottom: 2em;
+    margin-block: 25px 50px;
   }
 }
 
 section {
+  margin-block: 75px 60px;
+  display: block;
+  p {
+    margin-bottom: 48px;
+  }
   h2 {
-    color: black;
-    font-weight: $weight-normal;
-    font-size: 1.6em;
+    color: $accent-dark;
+    font-weight: $weight-bold;
+    font-size: 1.5em;
+    margin-top: 0;
   }
   h3 {
-    color: black;
-    font-weight: $weight-normal;
+    color: $accent-dark;
+    font-weight: $weight-bold;
+    font-size: 1.3em;
+    margin-block: 15px;
   }
+  .computer-image {
+    width: 100%;
+    margin-block: 65px 20px;
+  }
+  .devices-image {
+    width: 100%;
+    margin-block: 10px 100px;
+  }
+  .company {
+    display: block;
+    margin-block: 28px;
+  }
+  .icon {
+    margin-block: 18px;
+  }
+
+  .pb {
+    margin-bottom: 2em;
+  }
+
+  &.logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+main {
+  padding-inline: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: 100px;
+  a {
+    color: $accent-dark;
+    text-decoration: none;
+    display: block;
+    margin-block: 36px;
+    font-weight: $weight-bold;
+  }
+  img {
+    margin-top: 50px;
+    width: 55px;
+  }
+  background-color: rgba($accent-light, 0.1);
+  width: 100%;
 }
 
 button {
   all: unset;
   width: 310px;
-  height: 60px;
+  height: 55px;
   color: white;
-  font-weight: $weight-normal;
-  font-size: 1.2em;
-  letter-spacing: 0.05em;
+  font-weight: $weight-bold;
+  font-size: 18px;
   border-radius: 2em;
   margin: 0.5em auto;
   &.primary {
