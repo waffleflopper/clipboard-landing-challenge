@@ -20,38 +20,130 @@ body {
   font-family: $font-family;
   color: $accent-light;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: $weight-normal;
   background-image: url("/images/bg-header-mobile.png");
   @media only screen and (min-width: $mobile-width) {
     background-image: url("/images/bg-header-desktop.png");
   }
   background-position: top;
   background-repeat: no-repeat;
-
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
   text-align: center;
   padding: 0;
   margin: 0;
 }
+p {
+  font-size: 16px;
+  letter-spacing: 0.12px;
+}
+h1,
+h2,
+h3 {
+  color: black;
+  font-weight: $weight-normal;
+  margin: 0;
+}
+h1 {
+  font-size: 32px;
+  letter-spacing: -0.52px;
+}
+h2 {
+  font-size: 28px;
+  letter-spacing: -0.46px;
+}
+h3 {
+  font-size: 24px;
+  letter-spacing: -0.39px;
+}
+header,
+main {
+  margin-inline: 32px;
+}
 
 header {
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
   img {
-    margin-block: 50px;
+    margin-block: 64px;
+    width: 125px;
+    align-self: center;
+  }
+}
+footer {
+  width: 100%;
+  margin: 0;
+  background-color: lighten($accent-light, 30%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 55px;
+    margin-block: 56px;
+  }
+  .social {
+    display: flex;
+    gap: 40px;
+    img {
+      width: 24px;
+    }
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    a {
+      text-decoration: none;
+      color: $accent-dark;
+      letter-spacing: 0.14px;
+    }
   }
 }
 
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 135px;
+  img {
+    width: 100%;
+  }
+}
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+  .icon,
+  .company {
+    width: min-content;
+  }
+  .logos {
+    gap: 56px;
+  }
+}
+.buttons {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 button {
   all: unset;
   width: 311px;
-  @media only screen and (min-width: 380px) {
-    width: 227px;
-    margin-inline: 5px;
-  }
+
   height: 56px;
   color: white;
   font-weight: $weight-normal;
   border-radius: 28px;
-  margin: 0.5em auto;
+  margin: 0;
   &.primary {
     transition: background-color 250ms linear;
     background-color: $primary;
