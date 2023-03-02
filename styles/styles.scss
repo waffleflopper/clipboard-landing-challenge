@@ -37,29 +37,41 @@ body {
 p {
   font-size: 16px;
   letter-spacing: 0.12px;
+  max-width: 730px;
 }
 h1,
 h2,
 h3 {
-  color: black;
-  font-weight: $weight-normal;
+  color: $accent-dark;
+  font-weight: $weight-bold;
   margin: 0;
 }
+
 h1 {
   font-size: 32px;
   letter-spacing: -0.52px;
+  @media only screen and (min-width: $mobile-width) {
+    font-size: 46px;
+    letter-spacing: -0.75px;
+  }
 }
 h2 {
   font-size: 28px;
   letter-spacing: -0.46px;
+  @media only screen and (min-width: $mobile-width) {
+    font-size: 36px;
+    letter-spacing: -0.59px;
+  }
 }
 h3 {
   font-size: 24px;
   letter-spacing: -0.39px;
 }
+
 header,
 main {
   margin-inline: 32px;
+  max-width: 1440px;
 }
 
 header {
@@ -72,6 +84,12 @@ header {
     width: 125px;
     align-self: center;
   }
+  @media only screen and (min-width: $mobile-width) {
+    p {
+      font-size: 20px;
+      letter-spacing: 0.15px;
+    }
+  }
 }
 footer {
   width: 100%;
@@ -80,29 +98,46 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 44px;
+  padding-block: 56px;
+  @media only screen and (min-width: $mobile-width) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
   img {
     width: 55px;
-    margin-block: 56px;
   }
   .social {
     display: flex;
     gap: 40px;
+    align-items: center;
     img {
-      width: 24px;
+      width: min-content;
     }
   }
   .links {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    a {
-      text-decoration: none;
-      color: $accent-dark;
-      letter-spacing: 0.14px;
+    @media only screen and (min-width: $mobile-width) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: left;
     }
   }
 }
-
+a {
+  text-decoration: none;
+  color: $accent-dark;
+  letter-spacing: 0.14px;
+  &:hover {
+    text-decoration: underline;
+    color: $primary;
+    svg path {
+      fill: $primary;
+    }
+  }
+}
 article {
   display: flex;
   flex-direction: column;
@@ -121,12 +156,54 @@ section {
   flex-direction: column;
   gap: 48px;
   align-items: center;
+  @media only screen and (min-width: $mobile-width) {
+    h2 + p {
+      font-size: 18px;
+      letter-spacing: 0.14px;
+    }
+    img {
+      max-width: 75%;
+    }
+    &.workflow {
+      flex-direction: row;
+      justify-content: center;
+      gap: 30px;
+
+      .group {
+        max-width: 350px;
+      }
+    }
+    &.flex-row {
+      flex-direction: row;
+      gap: 110px;
+      text-align: left;
+      font-size: 16px;
+      letter-spacing: 0.12px;
+      img {
+        margin-left: -64px;
+        width: 100%;
+      }
+      .bullets {
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+      }
+    }
+  }
+  .icon {
+    margin-bottom: 40px;
+  }
   .icon,
   .company {
     width: min-content;
   }
-  .logos {
+  &.logos {
     gap: 56px;
+    @media only screen and (min-width: $mobile-width) {
+      flex-direction: row;
+      gap: 95px;
+      justify-content: center;
+    }
   }
 }
 .buttons {
@@ -134,14 +211,20 @@ section {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  @media only screen and (min-width: $mobile-width) {
+    flex-direction: row;
+  }
 }
 button {
   all: unset;
   width: 311px;
-
+  @media only screen and (min-width: $mobile-width) {
+    width: 227px;
+  }
   height: 56px;
   color: white;
   font-weight: $weight-normal;
+  letter-spacing: 0.5px;
   border-radius: 28px;
   margin: 0;
   &.primary {
