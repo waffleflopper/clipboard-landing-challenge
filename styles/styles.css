@@ -8,7 +8,7 @@ body {
   color: hsl(201, 11%, 66%);
   font-size: 18px;
   font-weight: 400;
-  background-image: url("/images/bg-header-mobile.png");
+  background-image: url("../images/bg-header-mobile.png");
   background-position: top;
   background-repeat: no-repeat;
   display: flex;
@@ -20,7 +20,7 @@ body {
 }
 @media only screen and (min-width: 380px) {
   body {
-    background-image: url("/images/bg-header-desktop.png");
+    background-image: url("../images/bg-header-desktop.png");
   }
 }
 

@@ -21,9 +21,9 @@ body {
   color: $accent-light;
   font-size: 18px;
   font-weight: $weight-normal;
-  background-image: url("/images/bg-header-mobile.png");
+  background-image: url("../images/bg-header-mobile.png");
   @media only screen and (min-width: $mobile-width) {
-    background-image: url("/images/bg-header-desktop.png");
+    background-image: url("../images/bg-header-desktop.png");
   }
   background-position: top;
   background-repeat: no-repeat;
