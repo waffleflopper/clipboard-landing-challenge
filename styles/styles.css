@@ -7,10 +7,13 @@ body {
   font-family: "Bai Jamjuree", sans-serif;
   color: hsl(201, 11%, 66%);
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   background-image: url("/images/bg-header-mobile.png");
   background-position: top;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -22,139 +25,125 @@ body {
 }
 
 p {
-  line-height: 25px;
-  margin: 0;
-  padding: 0;
   font-size: 16px;
-  padding-inline: 10px;
+  letter-spacing: 0.12px;
+}
+
+h1,
+h2,
+h3 {
+  color: black;
+  font-weight: 400;
+  margin: 0;
+}
+
+h1 {
+  font-size: 32px;
+  letter-spacing: -0.52px;
+}
+
+h2 {
+  font-size: 28px;
+  letter-spacing: -0.46px;
+}
+
+h3 {
+  font-size: 24px;
+  letter-spacing: -0.39px;
+}
+
+header,
+main {
+  margin-inline: 32px;
 }
 
 header {
-  text-align: center;
-  padding-inline: 25px;
-  margin-bottom: 75px;
-}
-header img {
-  margin: 120px auto 60px auto;
-}
-header h1 {
-  font-size: 30px;
-  font-weight: 600;
-  color: hsl(210, 10%, 33%);
-  margin: 0;
-}
-@media only screen and (min-width: 380px) {
-  header h1 {
-    font-size: 44px;
-  }
-}
-header p {
-  margin-block: 25px 50px;
-}
-@media only screen and (min-width: 380px) {
-  header p {
-    margin-inline: 25%;
-    padding-inline: 0;
-  }
-}
-
-section {
-  margin-block: 75px 60px;
-  display: block;
-  padding-inline: 25px;
-}
-section p {
-  margin-bottom: 48px;
-}
-section h2 {
-  color: hsl(210, 10%, 33%);
-  font-weight: 600;
-  font-size: 1.5em;
-  margin-top: 0;
-}
-section h3 {
-  color: hsl(210, 10%, 33%);
-  font-weight: 600;
-  font-size: 1.3em;
-  margin-block: 15px;
-}
-@media only screen and (min-width: 380px) {
-  section h2 {
-    font-size: 34px;
-  }
-  section .stinger {
-    padding-inline: 25%;
-  }
-  section .stinger p {
-    font-size: 18px;
-    padding: 0;
-  }
-}
-section .computer-image {
-  width: 100%;
-  margin-block: 65px 20px;
-}
-section .devices-image {
-  width: 100%;
-  margin-block: 10px;
-}
-section .company {
-  display: block;
-  margin-block: 28px;
-}
-section .icon {
-  margin-block: 18px;
-}
-section .pb {
-  margin-bottom: 2em;
-}
-section.logos {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 60px;
+}
+header img {
+  margin-block: 64px;
+  width: 125px;
+  align-self: center;
+}
+
+footer {
+  width: 100%;
+  margin: 0;
+  background-color: #f4f5f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer img {
+  width: 55px;
+  margin-block: 56px;
+}
+footer .social {
+  display: flex;
+  gap: 40px;
+}
+footer .social img {
+  width: 24px;
+}
+footer .links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+footer .links a {
+  text-decoration: none;
+  color: hsl(210, 10%, 33%);
+  letter-spacing: 0.14px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
 }
 
 main {
   display: flex;
   flex-direction: column;
+  gap: 135px;
 }
-
-footer {
-  margin-top: 100px;
-  padding-bottom: 36px;
-  background-color: rgba(159, 171, 178, 0.1);
+main img {
   width: 100%;
 }
-footer a {
-  color: hsl(210, 10%, 33%);
-  text-decoration: none;
-  display: block;
-  margin-block: 36px;
-  font-weight: 400;
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
 }
-footer a:last-child {
-  margin-bottom: 0px;
+section .icon,
+section .company {
+  width: -moz-min-content;
+  width: min-content;
 }
-footer img {
-  margin-top: 50px;
-  width: 55px;
+section .logos {
+  gap: 56px;
+}
+
+.buttons {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 button {
   all: unset;
-  width: 310px;
-  height: 55px;
+  width: 311px;
+  height: 56px;
   color: white;
-  font-weight: 600;
-  font-size: 18px;
-  border-radius: 2em;
-  margin: 0.5em auto;
-}
-@media only screen and (min-width: 380px) {
-  button {
-    width: 225px;
-    margin-inline: 5px;
-  }
+  font-weight: 400;
+  border-radius: 28px;
+  margin: 0;
 }
 button.primary {
   transition: background-color 250ms linear;
@@ -177,4 +166,4 @@ button.secondary {
 button.secondary:hover {
   background-color: #7585ff;
   cursor: pointer;
-}/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles2.css.map */

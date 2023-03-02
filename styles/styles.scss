@@ -20,149 +20,130 @@ body {
   font-family: $font-family;
   color: $accent-light;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: $weight-normal;
   background-image: url("/images/bg-header-mobile.png");
   @media only screen and (min-width: $mobile-width) {
     background-image: url("/images/bg-header-desktop.png");
   }
   background-position: top;
   background-repeat: no-repeat;
-
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
   text-align: center;
   padding: 0;
   margin: 0;
 }
-
 p {
-  line-height: 25px;
-  margin: 0;
-  padding: 0;
   font-size: 16px;
-  padding-inline: 10px;
+  letter-spacing: 0.12px;
+}
+h1,
+h2,
+h3 {
+  color: black;
+  font-weight: $weight-normal;
+  margin: 0;
+}
+h1 {
+  font-size: 32px;
+  letter-spacing: -0.52px;
+}
+h2 {
+  font-size: 28px;
+  letter-spacing: -0.46px;
+}
+h3 {
+  font-size: 24px;
+  letter-spacing: -0.39px;
+}
+header,
+main {
+  margin-inline: 32px;
 }
 
 header {
-  text-align: center;
-  padding-inline: 25px;
-  margin-bottom: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
   img {
-    margin: 120px auto 60px auto;
+    margin-block: 64px;
+    width: 125px;
+    align-self: center;
   }
-  h1 {
-    font-size: 30px;
-    font-weight: $weight-bold;
-    color: $accent-dark;
-    margin: 0;
-    @media only screen and (min-width: $mobile-width) {
-      font-size: 44px;
+}
+footer {
+  width: 100%;
+  margin: 0;
+  background-color: lighten($accent-light, 30%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 55px;
+    margin-block: 56px;
+  }
+  .social {
+    display: flex;
+    gap: 40px;
+    img {
+      width: 24px;
     }
   }
-  p {
-    margin-block: 25px 50px;
-    @media only screen and (min-width: $mobile-width) {
-      margin-inline: 25%;
-      padding-inline: 0;
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    a {
+      text-decoration: none;
+      color: $accent-dark;
+      letter-spacing: 0.14px;
     }
   }
 }
 
-section {
-  margin-block: 75px 60px;
-  display: block;
-  padding-inline: 25px;
-
-  p {
-    margin-bottom: 48px;
-  }
-  h2 {
-    color: $accent-dark;
-    font-weight: $weight-bold;
-    font-size: 1.5em;
-    margin-top: 0;
-  }
-  h3 {
-    color: $accent-dark;
-    font-weight: $weight-bold;
-    font-size: 1.3em;
-    margin-block: 15px;
-  }
-  @media only screen and (min-width: $mobile-width) {
-    h2 {
-      font-size: 34px;
-    }
-    .stinger {
-      padding-inline: 25%;
-      p {
-        font-size: 18px;
-        padding: 0;
-      }
-    }
-  }
-  .computer-image {
-    width: 100%;
-    margin-block: 65px 20px;
-  }
-  .devices-image {
-    width: 100%;
-    margin-block: 10px;
-  }
-  .company {
-    display: block;
-    margin-block: 28px;
-  }
-  .icon {
-    margin-block: 18px;
-  }
-
-  .pb {
-    margin-bottom: 2em;
-  }
-
-  &.logos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
 }
 main {
   display: flex;
   flex-direction: column;
-}
-
-footer {
-  margin-top: 100px;
-  padding-bottom: 36px;
-  a {
-    color: $accent-dark;
-    text-decoration: none;
-    display: block;
-    margin-block: 36px;
-    font-weight: $weight-normal;
-    &:last-child {
-      margin-bottom: 0px;
-    }
-  }
+  gap: 135px;
   img {
-    margin-top: 50px;
-    width: 55px;
+    width: 100%;
   }
-  background-color: rgba($accent-light, 0.1);
-  width: 100%;
 }
-
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+  .icon,
+  .company {
+    width: min-content;
+  }
+  .logos {
+    gap: 56px;
+  }
+}
+.buttons {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 button {
   all: unset;
-  width: 310px;
-  @media only screen and (min-width: 380px) {
-    width: 225px;
-    margin-inline: 5px;
-  }
-  height: 55px;
+  width: 311px;
+
+  height: 56px;
   color: white;
-  font-weight: $weight-bold;
-  font-size: 18px;
-  border-radius: 2em;
-  margin: 0.5em auto;
+  font-weight: $weight-normal;
+  border-radius: 28px;
+  margin: 0;
   &.primary {
     transition: background-color 250ms linear;
     background-color: $primary;
