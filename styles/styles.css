@@ -15,7 +15,7 @@ body {
   padding: 0;
   margin: 0;
 }
-@media only screen and (min-width: 376px) {
+@media only screen and (min-width: 380px) {
   body {
     background-image: url("/images/bg-header-desktop.png");
   }
@@ -43,20 +43,25 @@ header h1 {
   color: hsl(210, 10%, 33%);
   margin: 0;
 }
+@media only screen and (min-width: 380px) {
+  header h1 {
+    font-size: 44px;
+  }
+}
 header p {
   margin-block: 25px 50px;
+}
+@media only screen and (min-width: 380px) {
+  header p {
+    margin-inline: 25%;
+    padding-inline: 0;
+  }
 }
 
 section {
   margin-block: 75px 60px;
   display: block;
-}
-section .bullets {
-  display: flex;
-}
-section .bullets img {
-  flex-basis: 720px;
-  flex: 1;
+  padding-inline: 25px;
 }
 section p {
   margin-bottom: 48px;
@@ -72,6 +77,18 @@ section h3 {
   font-weight: 600;
   font-size: 1.3em;
   margin-block: 15px;
+}
+@media only screen and (min-width: 380px) {
+  section h2 {
+    font-size: 34px;
+  }
+  section .stinger {
+    padding-inline: 25%;
+  }
+  section .stinger p {
+    font-size: 18px;
+    padding: 0;
+  }
 }
 section .computer-image {
   width: 100%;
@@ -98,7 +115,6 @@ section.logos {
 }
 
 main {
-  padding-inline: 25px;
   display: flex;
   flex-direction: column;
 }
@@ -133,6 +149,12 @@ button {
   font-size: 18px;
   border-radius: 2em;
   margin: 0.5em auto;
+}
+@media only screen and (min-width: 380px) {
+  button {
+    width: 225px;
+    margin-inline: 5px;
+  }
 }
 button.primary {
   transition: background-color 250ms linear;

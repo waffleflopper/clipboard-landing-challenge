@@ -1,4 +1,4 @@
-$mobile-width: 375px;
+$mobile-width: 380px;
 
 $primary: hsl(171, 66%, 44%);
 $secondary: hsl(233, 100%, 69%);
@@ -22,7 +22,7 @@ body {
   font-size: 18px;
   font-weight: 300;
   background-image: url("/images/bg-header-mobile.png");
-  @media only screen and (min-width: 376px) {
+  @media only screen and (min-width: $mobile-width) {
     background-image: url("/images/bg-header-desktop.png");
   }
   background-position: top;
@@ -53,22 +53,24 @@ header {
     font-weight: $weight-bold;
     color: $accent-dark;
     margin: 0;
+    @media only screen and (min-width: $mobile-width) {
+      font-size: 44px;
+    }
   }
   p {
     margin-block: 25px 50px;
+    @media only screen and (min-width: $mobile-width) {
+      margin-inline: 25%;
+      padding-inline: 0;
+    }
   }
 }
 
 section {
   margin-block: 75px 60px;
   display: block;
-  .bullets {
-    display: flex;
-    img {
-      flex-basis: 720px;
-      flex: 1;
-    }
-  }
+  padding-inline: 25px;
+
   p {
     margin-bottom: 48px;
   }
@@ -83,6 +85,18 @@ section {
     font-weight: $weight-bold;
     font-size: 1.3em;
     margin-block: 15px;
+  }
+  @media only screen and (min-width: $mobile-width) {
+    h2 {
+      font-size: 34px;
+    }
+    .stinger {
+      padding-inline: 25%;
+      p {
+        font-size: 18px;
+        padding: 0;
+      }
+    }
   }
   .computer-image {
     width: 100%;
@@ -111,7 +125,6 @@ section {
   }
 }
 main {
-  padding-inline: 25px;
   display: flex;
   flex-direction: column;
 }
@@ -140,6 +153,10 @@ footer {
 button {
   all: unset;
   width: 310px;
+  @media only screen and (min-width: 380px) {
+    width: 225px;
+    margin-inline: 5px;
+  }
   height: 55px;
   color: white;
   font-weight: $weight-bold;
