@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;600&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  color: hsl(201, 11%, 66%);
+  font-size: 18px;
+  font-weight: 300;
+  background-image: url("/images/bg-header-mobile.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+@media only screen and (min-width: 380px) {
+  body {
+    background-image: url("/images/bg-header-desktop.png");
+  }
+}
+
+header {
+  margin-top: 50px;
+}
+header img {
+  margin-block: 50px;
+}
+
+button {
+  all: unset;
+  width: 311px;
+  height: 56px;
+  color: white;
+  font-weight: 400;
+  border-radius: 28px;
+  margin: 0.5em auto;
+}
+@media only screen and (min-width: 380px) {
+  button {
+    width: 227px;
+    margin-inline: 5px;
+  }
+}
+button.primary {
+  transition: background-color 250ms linear;
+  background-color: hsl(171, 66%, 44%);
+  border: 1px solid #1d907f;
+  border-bottom: 3px solid #1d907f;
+  box-shadow: 0em 0.5em 1em 0.1em rgba(38, 186, 164, 0.2);
+}
+button.primary:hover {
+  background-color: #2acbb3;
+  cursor: pointer;
+}
+button.secondary {
+  transition: background-color 250ms linear;
+  background-color: hsl(233, 100%, 69%);
+  border: 1px solid #2e46ff;
+  border-bottom: 3px solid #2e46ff;
+  box-shadow: 0em 0.5em 1em 0.1em rgba(97, 115, 255, 0.2);
+}
+button.secondary:hover {
+  background-color: #7585ff;
+  cursor: pointer;
+}/*# sourceMappingURL=styles2.css.map */
