@@ -29,11 +29,11 @@ Users should be able to:
 
 ![](./screens/desktop.png)
 
-[See a Mobile Screenshot!](./screens/mobile.png);
+[See a Mobile Screenshot](./screens/mobile.png);
 
 ### Links
 
-- Solution URL: [coming soon](https://your-solution-url.com)
+- Solution URL: [frontendmentor.io](https://www.frontendmentor.io/solutions/flexbox-mania-clipboard-landing-page-project-Q7P3v8SFhq)
 - Live Site URL: [GitHub Pages](https://waffleflopper.github.io/clipboard-landing-challenge/)
 
 ## My process
